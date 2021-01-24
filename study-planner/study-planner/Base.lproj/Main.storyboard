@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="study_planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYh-qe-U0M">
+                                <rect key="frame" x="160" y="244" width="94" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pbp-x0-ecK">
+                                <rect key="frame" x="57" y="562" width="300" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-tg-eOt">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="80"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.25720739599999998" blue="0.63245331739999999" alpha="0.82670219369999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Study"/>
+                                        <connections>
+                                            <action selector="studyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bf5-eG-Z5A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBz-V4-Cbk">
+                                        <rect key="frame" x="160" y="0.0" width="140" height="80"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.25720739599999998" blue="0.63245331739999999" alpha="0.82670219369999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Loop"/>
+                                        <connections>
+                                            <action selector="loopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nY7-bI-gcL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="95g-Uu-8Ny"/>
+                                    <constraint firstAttribute="width" constant="300" id="dwt-KO-0lU"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-m5-JHD">
+                                <rect key="frame" x="57" y="662" width="300" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-5Q-fnE">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="80"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.25720739599999998" blue="0.63245331739999999" alpha="0.82670219369999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Short Break"/>
+                                        <connections>
+                                            <action selector="sbButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTt-Ns-9yd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgS-5p-SCO">
+                                        <rect key="frame" x="160" y="0.0" width="140" height="80"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.25720739599999998" blue="0.63245331739999999" alpha="0.82670219369999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Long Break"/>
+                                        <connections>
+                                            <action selector="lbButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afi-Qa-owX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="8Cf-Mc-Afg"/>
+                                    <constraint firstAttribute="width" constant="300" id="IwJ-Ui-6br"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WYh-qe-U0M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9FJ-W8-Atw"/>
+                            <constraint firstItem="wvJ-m5-JHD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4w-CM-IbU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wvJ-m5-JHD" secondAttribute="bottom" constant="120" id="J6B-pZ-yMH"/>
+                            <constraint firstItem="WYh-qe-U0M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="ctT-8o-gdt"/>
+                            <constraint firstItem="Pbp-x0-ecK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSG-Nr-Pd3"/>
+                            <constraint firstItem="wvJ-m5-JHD" firstAttribute="top" secondItem="Pbp-x0-ecK" secondAttribute="bottom" constant="20" id="hmQ-Vj-x0j"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbButton" destination="CgS-5p-SCO" id="RQn-Xv-Iep"/>
+                        <outlet property="loopButton" destination="DBz-V4-Cbk" id="h7w-4U-KpR"/>
+                        <outlet property="sbButton" destination="vNO-5Q-fnE" id="nYr-Nx-pQb"/>
+                        <outlet property="studyButton" destination="U2Y-tg-eOt" id="qA4-2Y-uLY"/>
+                        <outlet property="timerLabel" destination="WYh-qe-U0M" id="3ht-ky-8qE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
