@@ -35,11 +35,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lbButton: UIButton!
     
-    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        for b in [studyButton, loopButton, sbButton, lbButton] {
+            b?.layer.cornerRadius = 10
+        }
         
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
@@ -77,7 +82,7 @@ class ViewController: UIViewController {
         if playing {
             if currentTime == 0 {
                 playing = false
-                playButton.setTitle("↩︎", for: .normal)
+                playButton.setImage(UIImage(systemName: "gobackward"), for: .normal)
             } else {
                 currentTime -= 1
             }
@@ -88,14 +93,14 @@ class ViewController: UIViewController {
     @IBAction func playButtonPressed(_ sender: Any) {
         if playing {
             playing = false
-            playButton.setTitle("▶︎", for: .normal)
+            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal) // pause
         } else if currentTime > 0 {
             playing = true
-            playButton.setTitle("ll", for: .normal)
+            playButton.setImage(UIImage(systemName: "pause"), for: .normal) // play
         } else if currentTime == 0 {
             playing = false
             currentTime = recentTime
-            playButton.setTitle("▶︎", for: .normal)
+            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)  // pause
             timerLabel.text = convertSeconds(secs: currentTime)
         }
     }
@@ -107,6 +112,7 @@ class ViewController: UIViewController {
         currentTime = studyTime*60
         recentTime = studyTime*60
         timerLabel.text = convertSeconds(secs: currentTime)
+        statusLabel.text = "Study"
     }
     
     @IBAction func loopButtonPressed(_ sender: Any) {
@@ -116,6 +122,7 @@ class ViewController: UIViewController {
         currentTime = studyTime*60
         recentTime = studyTime*60
         timerLabel.text = convertSeconds(secs: currentTime)
+        statusLabel.text = "Loop"
     }
     
     @IBAction func sbButtonPressed(_ sender: Any) {
@@ -125,6 +132,7 @@ class ViewController: UIViewController {
         currentTime = shortBreakTime*60
         recentTime = shortBreakTime*60
         timerLabel.text = convertSeconds(secs: currentTime)
+        statusLabel.text = "Short Break"
     }
     
     @IBAction func lbButtonPressed(_ sender: Any) {
@@ -134,16 +142,7 @@ class ViewController: UIViewController {
         currentTime = longBreakTime*60
         recentTime = longBreakTime*60
         timerLabel.text = convertSeconds(secs: currentTime)
-    }
-    
-    @IBAction func settingsButtonPressed(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "vc_settings") as? SettingsViewController else {
-            print("failed to return vc")
-            return
-        }
-        
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        statusLabel.text = "Long Break"
     }
     
 }
