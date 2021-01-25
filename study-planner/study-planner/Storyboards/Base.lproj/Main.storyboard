@@ -75,9 +75,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYd-nQ-fFG">
                                 <rect key="frame" x="192" y="319" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="▶︎"/>
+                                <state key="normal" title="▶︎">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WH5-pL-jQf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdV-JJ-Ads">
+                                <rect key="frame" x="192" y="782" width="30" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="⚙︎">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOY-dB-bdt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,8 +98,10 @@
                         <constraints>
                             <constraint firstItem="WYh-qe-U0M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9FJ-W8-Atw"/>
                             <constraint firstItem="wvJ-m5-JHD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4w-CM-IbU"/>
+                            <constraint firstItem="GdV-JJ-Ads" firstAttribute="top" secondItem="wvJ-m5-JHD" secondAttribute="bottom" constant="40" id="Gzm-Hr-BRV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wvJ-m5-JHD" secondAttribute="bottom" constant="120" id="J6B-pZ-yMH"/>
                             <constraint firstItem="LYd-nQ-fFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KUT-QS-1gf"/>
+                            <constraint firstItem="GdV-JJ-Ads" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LgA-ZO-lCL"/>
                             <constraint firstItem="WYh-qe-U0M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="ctT-8o-gdt"/>
                             <constraint firstItem="Pbp-x0-ecK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSG-Nr-Pd3"/>
                             <constraint firstItem="wvJ-m5-JHD" firstAttribute="top" secondItem="Pbp-x0-ecK" secondAttribute="bottom" constant="20" id="hmQ-Vj-x0j"/>
@@ -99,18 +113,40 @@
                         <outlet property="loopButton" destination="DBz-V4-Cbk" id="h7w-4U-KpR"/>
                         <outlet property="playButton" destination="LYd-nQ-fFG" id="o1I-9Z-3Oj"/>
                         <outlet property="sbButton" destination="vNO-5Q-fnE" id="nYr-Nx-pQb"/>
+                        <outlet property="settingsButton" destination="GdV-JJ-Ads" id="Dq2-X2-wy9"/>
                         <outlet property="studyButton" destination="U2Y-tg-eOt" id="qA4-2Y-uLY"/>
                         <outlet property="timerLabel" destination="WYh-qe-U0M" id="3ht-ky-8qE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-836" y="-17"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="t4A-oA-owW">
+            <objects>
+                <viewController storyboardIdentifier="vc_settings" id="9Kd-4c-3dA" customClass="SettingsViewController" customModule="study_planner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ES4-UF-vqb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1og-so-pDw"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6b-fn-vxF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-17"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

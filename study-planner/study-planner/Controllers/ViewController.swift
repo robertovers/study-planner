@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lbButton: UIButton!
     
+    @IBOutlet weak var settingsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -132,6 +134,15 @@ class ViewController: UIViewController {
         currentTime = longBreakTime*60
         recentTime = longBreakTime*60
         timerLabel.text = convertSeconds(secs: currentTime)
+    }
+    
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "vc_settings") as? SettingsViewController else {
+            print("failed to return vc")
+            return
+        }
+        
+        present(vc, animated: true)
     }
     
 }
