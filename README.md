@@ -1,2 +1,2 @@
-# study-planner
+# study-timer
 Study planner iOS app
