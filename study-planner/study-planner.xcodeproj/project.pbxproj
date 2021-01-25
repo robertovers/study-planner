@@ -56,15 +56,39 @@
 		A437E90825BD9D39007261A3 /* study-planner */ = {
 			isa = PBXGroup;
 			children = (
-				A437E90925BD9D39007261A3 /* AppDelegate.swift */,
-				A437E90B25BD9D39007261A3 /* SceneDelegate.swift */,
-				A437E90D25BD9D39007261A3 /* ViewController.swift */,
-				A437E90F25BD9D39007261A3 /* Main.storyboard */,
-				A437E91225BD9D3B007261A3 /* Assets.xcassets */,
-				A437E91425BD9D3B007261A3 /* LaunchScreen.storyboard */,
+				A437E92025BE4E0A007261A3 /* Storyboards */,
+				A437E92125BE4E12007261A3 /* Controllers */,
+				A437E91E25BE4DF5007261A3 /* Resources */,
 				A437E91725BD9D3B007261A3 /* Info.plist */,
 			);
 			path = "study-planner";
+			sourceTree = "<group>";
+		};
+		A437E91E25BE4DF5007261A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A437E91225BD9D3B007261A3 /* Assets.xcassets */,
+				A437E90925BD9D39007261A3 /* AppDelegate.swift */,
+				A437E90B25BD9D39007261A3 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A437E92025BE4E0A007261A3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A437E90F25BD9D39007261A3 /* Main.storyboard */,
+				A437E91425BD9D3B007261A3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A437E92125BE4E12007261A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A437E90D25BD9D39007261A3 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
