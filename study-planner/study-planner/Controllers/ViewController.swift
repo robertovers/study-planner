@@ -142,7 +142,8 @@ class ViewController: UIViewController {
             return
         }
         
-        present(vc, animated: true)
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
 }
