@@ -1,6 +1,6 @@
 # study-planner
 
-*latest update: 26/01/20*
+*latest update: 26/01/21*
 <div>
   <img src = "https://i.imgur.com/ckqihrZ.png" width = 300> 
 </div>
