@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="-1307.2463768115942" y="312.72321428571428"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Todo-->
         <scene sceneID="t4A-oA-owW">
             <objects>
                 <viewController storyboardIdentifier="vc_settings" id="9Kd-4c-3dA" customClass="SettingsViewController" customModule="study_planner" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,25 +149,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-cJ-fFk">
-                                <rect key="frame" x="25" y="64" width="99" height="54"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k5C-Vb-SbG">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1og-so-pDw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fv5-cJ-fFk" firstAttribute="leading" secondItem="1og-so-pDw" secondAttribute="leading" constant="25" id="GP9-AC-Pok"/>
-                            <constraint firstItem="Fv5-cJ-fFk" firstAttribute="top" secondItem="1og-so-pDw" secondAttribute="top" constant="20" id="aOV-lS-JVw"/>
+                            <constraint firstItem="1og-so-pDw" firstAttribute="trailing" secondItem="k5C-Vb-SbG" secondAttribute="trailing" id="3qo-xg-tvl"/>
+                            <constraint firstItem="1og-so-pDw" firstAttribute="bottom" secondItem="k5C-Vb-SbG" secondAttribute="bottom" id="B0a-x0-iFl"/>
+                            <constraint firstItem="k5C-Vb-SbG" firstAttribute="leading" secondItem="1og-so-pDw" secondAttribute="leading" id="aqH-5i-hm3"/>
+                            <constraint firstItem="k5C-Vb-SbG" firstAttribute="top" secondItem="1og-so-pDw" secondAttribute="top" id="h2G-kq-7sX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" id="Osc-lp-fNi"/>
+                    <navigationItem key="navigationItem" title="Todo" id="utN-cf-ADR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6b-fn-vxF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391" y="313"/>
+            <point key="canvasLocation" x="518.84057971014499" y="312.72321428571428"/>
         </scene>
         <!--Todo View Controller-->
         <scene sceneID="L3G-xH-As5">
@@ -176,26 +175,14 @@
                     <view key="view" contentMode="scaleToFill" id="uGr-pc-KiE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLe-6m-UPn">
-                                <rect key="frame" x="25" y="64" width="169" height="54"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8Ww-rX-GPt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eLe-6m-UPn" firstAttribute="top" secondItem="8Ww-rX-GPt" secondAttribute="top" constant="20" id="28J-ME-IQB"/>
-                            <constraint firstItem="eLe-6m-UPn" firstAttribute="leading" secondItem="8Ww-rX-GPt" secondAttribute="leading" constant="25" id="alw-pL-xoS"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gearshape.2" catalog="system" id="hJO-cu-YvS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBA-o0-l4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="313"/>
+            <point key="canvasLocation" x="1439.1304347826087" y="312.72321428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nuR-CN-JXR">
@@ -211,13 +198,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TLc-9T-sO2"/>
-                        <segue destination="9Kd-4c-3dA" kind="relationship" relationship="viewControllers" id="3FM-0g-QSX"/>
+                        <segue destination="DI2-jJ-nC0" kind="relationship" relationship="viewControllers" id="3FM-0g-QSX"/>
                         <segue destination="ShM-ax-gbc" kind="relationship" relationship="viewControllers" id="lT2-ii-CXh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFI-ei-4pU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391" y="-528"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Yi-sV-57S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DI2-jJ-nC0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" id="Osc-lp-fNi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TT8-T4-zik">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Kd-4c-3dA" kind="relationship" relationship="rootViewController" id="iwb-F6-06J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lL-wq-fvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391.304347826087" y="312.72321428571428"/>
         </scene>
     </scenes>
     <resources>
