@@ -15,5 +15,5 @@ Functionality | Status
 Pomodoro timer | :white_check_mark:
 Timer loop | :white_check_mark:
 Custom settings for timer | :large_orange_diamond:
-Todo list | :red_circle:
+Todo list | :large_orange_diamond:
 Alternate themes |:red_circle:
