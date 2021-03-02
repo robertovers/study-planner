@@ -1,6 +1,6 @@
 # study-planner
 
-*latest update: 26/01/21*
+*latest update: 01/02/21*
 <div>
   <img src = "https://i.imgur.com/ckqihrZ.png" width = 300> 
 </div>
@@ -15,5 +15,5 @@ Functionality | Status
 Pomodoro timer | :white_check_mark:
 Timer loop | :white_check_mark:
 Custom settings for timer | :large_orange_diamond:
-Todo list | :red_circle:
+Todo list | :large_orange_diamond:
 Alternate themes |:red_circle:
