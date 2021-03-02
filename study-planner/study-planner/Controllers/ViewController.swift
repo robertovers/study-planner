@@ -58,7 +58,9 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
-        timerLabel.text = convertSeconds(secs: studyTime)
+        currentTime = studyTime*60
+        
+        timerLabel.text = convertSeconds(secs: currentTime)
     }
     
     func convertSeconds(secs: Int) -> String {
@@ -116,9 +118,11 @@ class ViewController: UIViewController {
         if playing {
             playing = false
             playButton.setImage(UIImage(systemName: "play.fill"), for: .normal) // pause
+            timerLabel.textColor = UIColor.black
         } else if currentTime > 0 {
             playing = true
             playButton.setImage(UIImage(systemName: "pause"), for: .normal) // play
+            timerLabel.textColor = UIColor.systemGray
         } else if currentTime == 0 {
             playing = false
             if inloop == 0 {
@@ -127,6 +131,7 @@ class ViewController: UIViewController {
                 currentTime = recentTime
                 playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)  // pause
                 timerLabel.text = convertSeconds(secs: currentTime)
+                timerLabel.textColor = UIColor.black
             }
         }
     }
